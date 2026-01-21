@@ -1,0 +1,556 @@
+/* Fonts MUST be first */
+@import "@fontsource/outfit/300.css";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+@import "@fontsource/outfit/800.css";
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RideWise - Smart Mobility Analytics Platform */
+
+
+/* RideWise - Smart Mobility Analytics Platform */
+
+@layer base {
+  :root {
+    /* RideWise Dark Theme - Charcoal with Electric Blue & Neon Accents */
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Electric Blue Primary */
+    --primary: 200 100% 50%;
+    --primary-foreground: 220 20% 5%;
+    --primary-glow: 200 100% 60%;
+
+    /* Neon Orange Accent */
+    --accent: 25 100% 55%;
+    --accent-foreground: 220 20% 5%;
+    --accent-glow: 25 100% 65%;
+
+    /* Neon Green Secondary */
+    --secondary: 145 100% 45%;
+    --secondary-foreground: 220 20% 5%;
+    --secondary-glow: 145 100% 55%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 210 15% 55%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: 200 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Glassmorphism */
+    --glass-bg: 220 20% 12% / 0.7;
+    --glass-border: 200 100% 50% / 0.2;
+    --glass-glow: 200 100% 50% / 0.1;
+
+    /* Navigation */
+    --nav-background: 220 20% 6%;
+    --nav-foreground: 210 20% 95%;
+    --nav-border: 220 15% 15%;
+    --nav-hover: 200 100% 50% / 0.1;
+    --nav-active: 200 100% 50% / 0.15;
+
+    /* Status Colors */
+    --status-available: 145 100% 45%;
+    --status-in-use: 25 100% 55%;
+    --status-maintenance: 45 100% 50%;
+    --status-low-battery: 0 75% 55%;
+    --status-high-demand: 310 100% 60%;
+
+    /* Metric Colors */
+    --metric-green: 145 100% 45%;
+    --metric-blue: 200 100% 50%;
+    --metric-orange: 25 100% 55%;
+    --metric-purple: 280 100% 65%;
+
+    /* Chart Colors */
+    --chart-1: 200 100% 50%;
+    --chart-2: 145 100% 45%;
+    --chart-3: 25 100% 55%;
+    --chart-4: 280 100% 65%;
+    --chart-5: 310 100% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 200 100% 50%;
+    --sidebar-primary-foreground: 220 20% 5%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 200 100% 50%;
+
+    /* Chatbot */
+    --chatbot-bg: 220 18% 10%;
+    --chatbot-user: 200 100% 50%;
+    --chatbot-bot: 220 15% 20%;
+    --chatbot-border: 200 100% 50% / 0.3;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--glass-bg)),
+    hsl(220 20% 10% / 0.8)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--glass-border));
+  box-shadow: 
+    0 0 20px hsl(var(--glass-glow)),
+    inset 0 1px 0 hsl(200 100% 50% / 0.05);
+}
+
+.glass-card:hover {
+  border-color: hsl(200 100% 50% / 0.4);
+  box-shadow: 
+    0 0 30px hsl(200 100% 50% / 0.15),
+    0 8px 32px hsl(220 20% 0% / 0.4),
+    inset 0 1px 0 hsl(200 100% 50% / 0.1);
+}
+
+/* Neon Glow Effects */
+.neon-blue {
+  box-shadow: 
+    0 0 10px hsl(200 100% 50% / 0.5),
+    0 0 30px hsl(200 100% 50% / 0.3),
+    0 0 60px hsl(200 100% 50% / 0.15);
+}
+
+.neon-green {
+  box-shadow: 
+    0 0 10px hsl(145 100% 45% / 0.5),
+    0 0 30px hsl(145 100% 45% / 0.3),
+    0 0 60px hsl(145 100% 45% / 0.15);
+}
+
+.neon-orange {
+  box-shadow: 
+    0 0 10px hsl(25 100% 55% / 0.5),
+    0 0 30px hsl(25 100% 55% / 0.3),
+    0 0 60px hsl(25 100% 55% / 0.15);
+}
+
+/* Gradient Backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(200 100% 50%), hsl(200 100% 40%));
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, hsl(25 100% 55%), hsl(25 100% 45%));
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, hsl(145 100% 45%), hsl(145 100% 35%));
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 20% 4%));
+}
+
+.gradient-radial-glow {
+  background: radial-gradient(
+    ellipse at center,
+    hsl(200 100% 50% / 0.15) 0%,
+    transparent 70%
+  );
+}
+
+/* Text Gradients */
+.text-gradient-primary {
+  background: linear-gradient(135deg, hsl(200 100% 60%), hsl(200 100% 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, hsl(25 100% 60%), hsl(145 100% 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shadows */
+.shadow-glow {
+  box-shadow: 
+    0 0 20px hsl(200 100% 50% / 0.2),
+    0 4px 20px hsl(220 20% 0% / 0.3);
+}
+
+.shadow-card {
+  box-shadow: 
+    0 4px 20px hsl(220 20% 0% / 0.4),
+    0 0 1px hsl(200 100% 50% / 0.1);
+}
+
+.shadow-hover {
+  box-shadow: 
+    0 8px 30px hsl(220 20% 0% / 0.5),
+    0 0 20px hsl(200 100% 50% / 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    opacity: 1;
+    box-shadow: 0 0 20px hsl(200 100% 50% / 0.3);
+  }
+  50% { 
+    opacity: 0.9;
+    box-shadow: 0 0 40px hsl(200 100% 50% / 0.5);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+@keyframes bike-ignition {
+  0% { 
+    opacity: 0;
+    transform: scale(0.8) translateX(-30px);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateX(5px);
+    filter: blur(0);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes wheel-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes road-lines {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(200%); opacity: 0; }
+}
+
+@keyframes headlight-beam {
+  0%, 100% { opacity: 0.3; transform: scaleX(1); }
+  50% { opacity: 0.8; transform: scaleX(1.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    filter: drop-shadow(0 0 5px hsl(200 100% 50% / 0.5));
+  }
+  50% { 
+    filter: drop-shadow(0 0 20px hsl(200 100% 50% / 0.8));
+  }
+}
+
+@keyframes chart-draw {
+  from { 
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  to { 
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes data-flow {
+  0% { 
+    opacity: 0.3;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0.3;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes analyzing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bike-move {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(3px, -2px); }
+  50% { transform: translate(6px, 0); }
+  75% { transform: translate(3px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-bike-ignition {
+  animation: bike-ignition 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-wheel-spin {
+  animation: wheel-spin 2s linear infinite;
+}
+
+.animate-road-lines {
+  animation: road-lines 4s linear infinite;
+}
+
+.animate-headlight {
+  animation: headlight-beam 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-chart-draw {
+  animation: chart-draw 1.5s ease-out forwards;
+}
+
+.animate-data-flow {
+  animation: data-flow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(200 100% 50% / 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-analyzing {
+  animation: analyzing 1.5s linear infinite;
+}
+
+.animate-bike-move {
+  animation: bike-move 3s ease-in-out infinite;
+}
+
+/* Staggered animations */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in;
+}
+
+/* Status Indicators */
+.status-available {
+  background-color: hsl(var(--status-available));
+  box-shadow: 0 0 10px hsl(var(--status-available) / 0.5);
+}
+
+.status-in-use {
+  background-color: hsl(var(--status-in-use));
+  box-shadow: 0 0 10px hsl(var(--status-in-use) / 0.5);
+}
+
+.status-maintenance {
+  background-color: hsl(var(--status-maintenance));
+  box-shadow: 0 0 10px hsl(var(--status-maintenance) / 0.5);
+}
+
+.status-high-demand {
+  background-color: hsl(var(--status-high-demand));
+  box-shadow: 0 0 10px hsl(var(--status-high-demand) / 0.5);
+}
+
+/* Heatmap Overlay */
+.heatmap-overlay {
+  background: radial-gradient(
+    circle at center,
+    hsl(0 100% 50% / 0.4) 0%,
+    hsl(25 100% 55% / 0.3) 30%,
+    hsl(145 100% 45% / 0.2) 60%,
+    transparent 100%
+  );
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Focus States */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220 20% 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 15% 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(200 100% 50% / 0.5);
+}
+
+/* Live Indicator */
+.live-indicator {
+  position: relative;
+}
+
+.live-indicator::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: hsl(var(--status-available));
+  border-radius: 50%;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+/* Input Glow */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px hsl(200 100% 50% / 0.2);
+}
+
+/* Button Glow on Hover */
+.btn-glow:hover {
+  box-shadow: 0 0 20px hsl(200 100% 50% / 0.4);
+}
+
+/* Road animation background */
+.road-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.road-animation::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(200 100% 50% / 0.5), transparent);
+  animation: road-lines 3s linear infinite;
+}
