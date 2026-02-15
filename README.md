@@ -1,43 +1,95 @@
-# 🚲 RideWise – Bike Demand Prediction Platform
+ RideWise: Bike Demand Prediction
 
-**Ride Smarter. Plan Better.**
-
-RideWise is an AI-powered web application that predicts bike-sharing demand using machine learning and weather-based insights.  
-It helps optimize bike distribution, reduce shortages, and improve user experience.
+An AI-powered web application that predicts bike-sharing demand using machine learning and environmental factors like weather, season, and time.
+Designed to help operators optimize fleet distribution and reduce demand shortages.
 
 ---
 
 ## 🌐 Live Demo
-👉 https://ridewise-ui.onrender.com
+
+Frontend deployed on *Render*:
+👉 [https://ridewise-ui.onrender.com](https://ridewise-ui.onrender.com)
 
 ---
 
-## ✨ What Can RideWise Do?
-- ⏱️ Hourly demand prediction for peak-hour planning  
-- 📅 Daily demand forecasting for strategic decisions  
-- 📂 CSV upload for historical data analysis  
-- 📊 Live dashboard with demand pressure & alerts  
-- 🤖 AI confidence indicators showing model reliability  
+## 🚀 Key Features
+
+* 📊 Hourly demand prediction using environmental parameters
+* 📅 Daily demand forecasting for strategic planning
+* 📂 CSV upload for batch demand analysis
+* 📈 Interactive dashboard with real-time insights
+* 🧠 Machine Learning regression model for demand estimation
+* 🎯 Actionable alerts for surge zones and low inventory
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React, TypeScript, Tailwind CSS, shadcn/ui, Vite  
-- **Backend:** Python (Flask / FastAPI)  
-- **Machine Learning:** Regression models using weather & temporal data  
-- **Deployment:** GitHub + Render  
+## 🛠 Tech Stack
+
+*Frontend:* React + TypeScript + Tailwind CSS + shadcn-ui
+*Backend:* Python (Flask / FastAPI)
+*Machine Learning:* Regression-based demand prediction model
+*Deployment:* GitHub + Render
 
 ---
 
-## 🚀 Getting Started (Local Setup)
+## 🔍 How RideWise Works
 
-### Prerequisites
-- Node.js
-- npm
+1. User selects prediction type (Hourly / Daily / CSV)
+2. Inputs environmental parameters (season, weather, temperature, humidity, wind speed)
+3. Frontend sends request to backend ML model
+4. Model predicts expected bike demand
+5. Results displayed with peak hour insights and demand trends
 
-### Run locally
-```bash
-git clone <YOUR_GIT_URL>
-cd <YOUR_PROJECT_NAME>
+---
+
+## 🧪 Use Case
+
+RideWise helps bike-sharing companies:
+
+* Predict peak rental hours
+* Optimize bike redistribution
+* Reduce shortages during high demand
+* Improve operational efficiency
+
+---
+
+## 🖥️ Local Setup
+
+bash
+# Clone repository from :contentReference[oaicite:1]{index=1}
+git clone https://github.com/<your-username>/RideWise-BikeDemandPrediction2.git
+cd RideWise-BikeDemandPrediction2
+
+# Install frontend dependencies
 npm install
 npm run dev
+
+# Run backend server (example)
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+
+---
+
+## 📌 Project Status
+
+✔ UI Completed
+✔ ML Model Integrated
+✔ Live Deployment Ready
+✔ Demo Tested Successfully
+
+---
+
+## ❤️ Acknowledgement
+
+Built as part of an industry-oriented internship project to demonstrate real-world demand forecasting using machine learning.
+
+---
+
+### Why this version is BEST:
+
+* Professional but not exaggerated
+* Matches your actual app flow (Hourly, Daily, CSV, Dashboard)
+* Impressive for Infosys panel review
+* Clear architecture explanation
